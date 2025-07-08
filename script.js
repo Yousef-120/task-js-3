@@ -1,4 +1,4 @@
-let degree = prompt(`Enter Your Degree`);
+let degree = +prompt(`Enter Your Degree`);
 
 console.log(`If With and`);
 if (degree >= 50) {
@@ -10,13 +10,19 @@ if (degree >= 50) {
     console.log(`جيد جدا`);
   } else if (degree >= 85 && degree <= 100) {
     console.log(`امتياز`);
+  } else if (degree > 100)
+  {
+    console.log(`ادخل رقم من 0 الي 100`);
   }
 } else if (degree == null) {
   console.log(`ادخل قيمه`);
-} else if (degree < 0 || degree > 100) {
+} else if (degree < 0 ) {
   console.log(`ادخل رقم من 0 الي 100`);
-} else {
+} else if(degree < 50 || degree > 0) {
   console.log(`راسب`);
+} else
+{
+  console.log(`ادخل رقم من 0 الي 100`);
 }
 
 console.log(`Nested If`);
@@ -67,4 +73,8 @@ switch (true) {
   case degree <= 100:
     console.log(`امتياز`);
     break;
+
+    default:
+      console.log(`ادخل رقم من 0 الي 100`);
+      break;
 }
